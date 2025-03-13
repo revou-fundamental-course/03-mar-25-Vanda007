@@ -1,35 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Meta Data -->
     <meta charset="UTF-8">
-    <!-- For responsive purpose -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portofolio Vanda</title>
-
-    <!-- CSS -->
-     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Main Header -->
+    <!-- Header -->
     <header class="main-header">
-        <!-- Logo -->
-         <img class="main-logo" src="asset/profile.png" alt="Profile">
-
-         <!-- Navigation -->
-          <nav>
+        <img class="main-logo" src="asset/profile.png" alt="Profile">
+        <nav>
             <a href="#home">Home</a>
             <a href="#our-profile">Our Profile</a>
             <a href="#message-us">Message Us</a>
-          </nav>
+        </nav>
     </header>
-    <section id="profile" class="slider">
-        <h1 class="text">Hi, Welcome to My Portofolio </h1>
+
+    <!-- Home Section -->
+    <section id="home">
+        <h1 class="text">Hi, Welcome to My Portofolio</h1>
+    </section>
+
+    <!-- Our Profile dengan autoslide -->
+    <section id="our-profile" class="slider">
         <div class="slides">
-            <div class="slide">Profile 1</div>
-            <div class="silde">Profile 2</div>
-            <div class="silde">Profile 3</div>
+            <div class="slide"><img src="asset/slide1.jpg" alt="Profile 1"></div>
+            <div class="slide"><img src="asset/slide2.jpg" alt="Profile 2"></div>
+            <div class="slide"><img src="asset/slide3.jpg" alt="Profile 3"></div>
         </div>
     </section>
+
+    <!-- Message Us Section -->
+    <section id="message-us" class="message">
+        <div class="message-container">
+            <form id="messageForm">
+                <label>Nama:
+                    <input type="text" id="name" required>
+                </label>
+                <label>Tanggal Lahir:
+                    <input type="date" id="dob" required>
+                </label>
+                <label>Jenis Kelamin:</label>
+                <div class="gender-options">
+                    <input type="radio" name="gender" value="Laki-Laki" required> Laki-Laki
+                    <input type="radio" name="gender" value="Perempuan" required> Perempuan
+                </div>
+                <label>Pesan:
+                    <textarea id="messageText" required></textarea>
+                </label>
+                <button type="submit">Submit</button>
+            </form>
+            <div class="message-output" id="messageOutput"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; Created by Vanda 2025</p>
+    </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
